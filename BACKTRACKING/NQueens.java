@@ -1,6 +1,6 @@
 import java.util.*;
-class Nqueens{
-    public static void solveNqueen(int n){
+class NQueens{
+    public static void solveNQueens(int n){
         int board[][] = new int[n][n];
         solveNqueenutil(board,0,n);
     }
@@ -42,12 +42,11 @@ class Nqueens{
                 System.out.print((cell==1?"Q ":". "));
             System.out.println();    
         }
-        
     }
     public static void main(String []args){
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the size of board::");
         int n = sc.nextInt();
-        solveNqueen(n);
+        solveNQueens(n);
     }
 }
