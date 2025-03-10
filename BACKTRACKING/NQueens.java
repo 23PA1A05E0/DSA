@@ -14,9 +14,9 @@ class NQueens{
             if(isSafe(board,i,col,n)){
                 board[i][col] = 1;
             
-            solveNqueenutil(board,col+1,n);
+                solveNqueenutil(board,col+1,n);
             
-            board[i][col] = 0;
+                board[i][col] = 0;
           }    
         }
     }
