@@ -12,7 +12,7 @@ class Job {
     }
 }
 
-public class JobScheduling {
+public class JobSequencing {
     public static void maxProfit(Job[] jobs) {
         Arrays.sort(jobs, (a, b) -> b.profit - a.profit);  // Sort jobs by profit in descending order
 
