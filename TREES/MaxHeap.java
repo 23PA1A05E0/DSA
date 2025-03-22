@@ -28,8 +28,8 @@ public class MaxHeap{
            temp = arr[max];
            arr[max] = arr[i];
            arr[i] = temp; 
-        }        
-
+           maxHeapify(max);
+        }      
     }
 
     public static void insert(int x){
