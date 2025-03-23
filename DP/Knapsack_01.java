@@ -42,15 +42,19 @@ public class Knapsack_01 {
         }
         System.out.println("Selected objects (weights):");
         int i = n, j = m;
-        while (i > 0 && j > 0) {
+        int ar[] = new int[n];
+       while (i > 0 && j > 0) {
             if (k[i][j] == k[i - 1][j]) {
+                ar[i-1]=0;
                 i--;
             } else {
-                System.out.print(w[i - 1] + " ");
-                j = j - w[i - 1];
+                ar[i-1]=1;
                 i--;
+                j -= w[i];
             }
         }
+        for(int num:ar)
+            System.out.print(num+" ");
         System.out.println();
 
         return k[n][m];
