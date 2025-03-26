@@ -75,34 +75,28 @@ public class MaxHeap{
         MaxHeap mh = new MaxHeap(size);
         int opt,key;
         do{
-            
-            System.out.println("1-insert 2-delete 3-display 4-removeMax 5- getSize 6-getMax 7-exit");
+            System.out.println("1-insert 2-display 3-removeMax 4-getSize 5-getMax 6-exit");
             opt = sc.nextInt();
             switch (opt) {
                 case 1: System.out.print("Enter the element:");
                         key = sc.nextInt();
                         insert(key);
                         break;
-                case 2: System.out.print("Enter the element to delete");
-                        key = sc.nextInt();
-                        break;
-                case 3: display(); 
+                case 2: display(); 
                         System.out.println();
                         break;
-                case 4: removeMax();
+                case 3: removeMax();
                         break;
-                case 5: System.out.println("Size= " + getSize());
+                case 4: System.out.println("Size= " + getSize());
                         break;
-                case 6: System.out.println("Maximum element is " + getMax()); 
+                case 5: System.out.println("Maximum element is " + getMax()); 
                         break;
-                case 7 : System.out.println("exists...."); 
+                case 6: System.out.println("exits...."); 
                          break;
                 default: System.out.println("Enter the valid option");
                           break;
             }
         }
-        while (opt!=7) ;
-            
-        
+        while (opt!=6) ;
     }
 }
