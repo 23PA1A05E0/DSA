@@ -34,7 +34,7 @@ public class MinHeap {
             temp = arr[min];
             arr[min] = arr[i];
             arr[i] = temp;
-            minHeapify(min); // Call minHeapify recursively
+            minHeapify(min);
         }
     }
 
@@ -57,7 +57,7 @@ public class MinHeap {
     public static void removeMin() {
         arr[0] = arr[heapSize - 1];
         heapSize--;
-        minHeapify(0); // Ensure to call minHeapify on the root node
+        minHeapify(0);
     }
 
     public static int getMin() {
@@ -85,7 +85,7 @@ public class MinHeap {
         MinHeap mh = new MinHeap(size);
         int opt, key;
         do {
-            System.out.println("1-insert 2-delete 3-display 4-removeMin 5-getSize 6-getMin 7-exit");
+            System.out.println("1-insert 2-display 3-removeMin 4-getSize 5-getMin 6-exit");
             opt = sc.nextInt();
             switch (opt) {
                 case 1:
@@ -94,30 +94,25 @@ public class MinHeap {
                     insert(key);
                     break;
                 case 2:
-                    System.out.print("Enter the element to delete");
-                    key = sc.nextInt();
-                    break;
-                case 3:
                     display();
                     System.out.println();
                     break;
-                case 4:
+                case 3:
                     removeMin();
                     break;
-                case 5:
+                case 4:
                     System.out.println("Size= " + getSize());
                     break;
-                case 6:
+                case 5:
                     System.out.println("Minimum element is " + getMin());
                     break;
-                case 7:
+                case 6:
                     System.out.println("exits....");
                     break;
                 default:
                     System.out.println("Enter a valid option");
                     break;
             }
-        } while (opt != 7);
+        } while (opt != 6);
     }
 }
-
