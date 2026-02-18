@@ -1,4 +1,4 @@
-class SegmentTree{
+class SegmentTreeSum{
     Node root;
     public SegmentTree(int arr[]){
         root = constructTree(arr, 0, arr.length - 1);
