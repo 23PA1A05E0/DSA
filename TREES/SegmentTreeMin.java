@@ -42,7 +42,7 @@ public class SegmentTreeMin {
             return;
         }
         int mid = root.startInterval + (root.endInterval - root.startInterval) / 2;
-        if(idx < mid)
+        if(idx <= mid)
             update(root.left, idx, value);
         else
             update(root.right, idx, value);
@@ -64,3 +64,4 @@ class Node{
         this.endInterval = ei;
     }
 }
+
